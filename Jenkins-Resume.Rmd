@@ -42,8 +42,8 @@ tribble(
   "\\faIcon{r-project} -- Stan -- Jags -- SQL -- Some Python -- Some HTML",
   "\\faIcon{git}/\\faIcon{github} -- \\faIcon{markdown} -- RMarkdown -- Jupyter Notebooks -- \\LaTeX"
 ) %>% 
-  kable(booktabs = T, align = "c", escape = F, format = "latex") %>% 
-  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") %>% 
+  kable(booktabs = T, align = "c", escape = F, format = "latex", linesep = "") %>% 
+  kable_styling(full_width = F, font_size = 8, latex_options = "HOLD_position") %>% 
   row_spec(0, bold = T, color = "#009acd") %>% 
   row_spec(1, bold = F, color = "black") %>% 
   column_spec(column = 2:3, width = "4.75cm") %>% 
@@ -61,8 +61,8 @@ education <-
   uncount(count) %>% 
   mutate(descriptions = c(
     "Coursework in statistics, research design, political behavior, and political economy.",
-    "4 published projects analyzing political behavior with advanced statistical modeling (see publications section).",
-    "Dissertation: Built a Confirmatory Factor Analysis model to measure congressional committee issue concentration and develop a theory of interest group influence in the policymaking process. Used data on 16 years of campaign finance records to test my theory.",
+    "4 published projects analyzing political behavior with advanced statistical modeling (see projects section below).",
+    "Dissertation: Building a Confirmatory Factor Analysis model to measure congressional committee issue concentration and develop a theory of interest group influence in the policymaking process. Used data on 16 years of campaign finance records to test my theory.",
     "Coursework in econometrics, research design, and advanced micro and macoeconomic theory.",
     "Thesis: Used fixed effects regression to analyze the impact of E-Verify laws on wage and employment rates across the U.S."
   ))
@@ -83,21 +83,19 @@ experience <-
   tribble(~position, ~org, ~when, ~place,
           "Part-time Consultant - Graduate Quantitative Methods Center", "University of California, Riverside", "10/2021 -- Present", "Riverside, CA",
           "Data Science Teaching Assistant - School of Public Policy", "University of California, Riverside", "03/2020 -- Present", "Riverside, CA",
-          "Teaching Assistant - Department of Political Science", "University of California, Riverside", "10/2018 -- Present", "Riverside, CA",
           "Graduate Student Researcher", "Center for International Trade and Transportation", "05/2017 -- 09/2017", "Long Beach, CA",
-          "Teaching Assistant - Department of Economics", "California State University, Long Beach", "08/2015 -- 06/2017", "Long Beach, CA") %>% 
-  mutate(count = c(2, 4, 1, 1, 1)) %>% 
+          "Teaching Assistant - Departments of Political Science \\& Economics", "California State University, Long Beach \\& University of California, Riverside", "08/2015 -- Present", "Long Beach \\& Riverside, CA") %>% 
+  mutate(count = c(2, 4, 1, 1)) %>% 
   uncount(count) %>% 
   mutate(descriptions = c(
     "One-on-one consultations with graduate students across the university to help with statistics, statistical software, data wrangling, and data visualization.",
     "Develop and teach workshops on R programming and statistical methods. Developed workshops include \\href{https://nicholasrjenkins.science/tutorial/bda_in_r/bayes_with_brms/}{Intro to Bayesian Data Analysis}, \\href{https://nicholasrjenkins.science/tutorial/glms/}{Generalized Linear Models}, Git and GitHub for Collaboration and Open Science, Time Series Analysis, and Data Visualization with ggplot.",
-    "Advise students in the Master of Public Policy (MPP) program on their capstone projects. Typical topics include helping students with data collection, cleaning, visualization, and analysis.",
+    "Advise students in the Master of Public Policy (MPP) program on data collection, cleaning, visualization, and analysis for their capstone projects.",
     "Developed a \\href{https://github.com/nrjenkins/MPP-Boot-Camp}{boot camp workshop} introducing incoming MPP students to the basics of working with data in R.",
     "Developed and taught a \\href{https://github.com/nrjenkins/Data-Science-Workshop}{data science workshop} for second-year MPP students introducing them to the data science process.",
     "Designed a \\href{https://nicholasrjenkins.science/tutorial/policy-eval/}{policy evaluation project} for the policy analysis class that guides students through the process of data cleaning, data visualization, mapping, descriptive analysis, and causal modeling techniques for analyzing the impact of public policies.",
-    "Taught discussion sections for the following courses: Policy Evaluation, Theory and Methodology of Political Science, Politics and Economic Policy, and American Politics.",
     "Labor market research, report writing, and data management for the center’s transportation and labor market research projects.",
-    "Taught lab sections for Introduction to Econometrics, Time Series Analysis, and Economic Statistics."
+    "Taught sections for Introduction to Econometrics, Time Series Analysis, Economic Statistics, Policy Evaluation, Theory and Methodology of Political Science, Politics and Economic Policy, and American Politics."
   ))
 
 experience %>% 
@@ -135,7 +133,7 @@ tribble(
 ```
 
 
-# \faIcon{file-alt} Publications
+# \faIcon{file-alt} Projects
 
 ```{r Publications, results = "asis"}
 pub <- get_publications("FPXYTX0AAAAJ")
