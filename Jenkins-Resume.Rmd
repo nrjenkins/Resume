@@ -6,7 +6,7 @@ phone: +1 949 288-3417
 www: nicholasrjenkins.science
 email: "nicholas.jenkins@email.ucr.edu"
 github: nrjenkins
-linkedin: nrjenkins01
+linkedin: nickjenkinsphd
 headcolor: "000000"
 date: "`r format(Sys.time(), '%B %Y')`"
 docname: "Résumé"
@@ -152,8 +152,8 @@ pub %>%
         str_c(title, "\\href{https://www.worldscientific.com/doi/abs/10.1142/S1793993319500108}{\\faIcon[regular]{file-pdf}}", sep = " ")
     ),
     descriptions = c(
-      "Designed a conjoint survey experiment to test how accepting or refusing PAC contributions affects respondents' evaluation of candidates.",
-      "Designed an audit experiment to test the responsiveness of local government officials to information requests from donors and non-donors.",
+      "Designed a conjoint survey experiment for a survey of 50,000+ respondents (the \\href{https://cces.gov.harvard.edu}{Cooperative Election Study}) to test how accepting or refusing PAC contributions affects respondents' evaluation of candidates.",
+      "Designed an audit experiment to test the responsiveness of local government officials in municipalities across 5 states to information requests from donors and non-donors.",
       "Used geographic campaign contribution data to detect corporate contributions to candidates made from within and outside the candidate's district and both Dirichlet and Zero-Inflated Gamma multilevel regression to see how anti-corporate PAC pledges affect corporate giving.",
       "Used country-level data on the size of different economic sectors and government responses to interest rate shocks to examine if interest groups affect whether governments respond to shocks by defending the exchange rate or maintaing full employment."
     )
