@@ -33,7 +33,7 @@ p_load(tidyverse, vitae, rorcid, fontawesome, emojifont, kableExtra, huxtable,
        gridExtra, scholar)
 ```
 
-# \faIcon{cogs} Skills
+# \faIcon{cogs} Current Skills
 
 ```{r Skills}
 tribble(
