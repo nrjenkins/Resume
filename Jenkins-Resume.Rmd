@@ -55,7 +55,7 @@ tribble(
 ```{r Education}
 education <-
   tribble(~university, ~completion_date, ~degree_program, ~place,
-          "University of California, Riverside", "Exp. 2023", "Ph.D. in Political Science", "Riverside, CA",
+          "University of California, Riverside", "Exp. June 2023", "Ph.D. in Political Science", "Riverside, CA",
           "California State University, Long Beach", "2017", "M.A. in Economics", "Long Beach, CA") %>%
   mutate(count = c(3, 2)) %>% 
   uncount(count) %>% 
